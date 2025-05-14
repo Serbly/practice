@@ -1,7 +1,5 @@
 package com.example.practice.web.controller;
 
-import com.example.practice.exception.AlreadyExitsException;
-import com.example.practice.repository.UserRepository;
 import com.example.practice.security.SecurityService;
 import com.example.practice.web.model.*;
 import lombok.RequiredArgsConstructor;
@@ -22,7 +20,7 @@ public class AuthController {
         return ResponseEntity.ok(securityService.authenticateUser(loginRequest));
     }
 
-    @PostMapping("/create")
+    @PostMapping("/signup")
     public ResponseEntity<SimpleResponse> createUser(@RequestBody CreateUserRequest createUserRequest) {
         securityService.createUser(createUserRequest);
         return ResponseEntity.ok(new SimpleResponse("User created"));

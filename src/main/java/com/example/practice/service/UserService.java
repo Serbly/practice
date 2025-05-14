@@ -33,6 +33,7 @@ public class UserService {
             User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
             user.setUsername(loginRequest.getUsername());
             user.setPassword(passwordEncoder.encode(loginRequest.getPassword()));
+            userRepository.save(user);
         }
 
     }

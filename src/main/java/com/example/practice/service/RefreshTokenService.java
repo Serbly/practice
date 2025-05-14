@@ -45,8 +45,4 @@ public class RefreshTokenService {
 
         return token;
     }
-
-    public void deleteByUserId(Long userId) {
-        refreshTokenRepository.deleteByUserId(userId);
-    }
 }

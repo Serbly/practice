@@ -4,7 +4,6 @@ import com.example.practice.entity.User;
 import com.example.practice.service.AdminService;
 import com.example.practice.web.model.CreateUserByAdminRequest;
 import com.example.practice.web.model.SimpleResponse;
-import com.example.practice.web.model.UpdateUserRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
